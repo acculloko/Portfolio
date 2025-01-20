@@ -1,0 +1,93 @@
+:root {
+    --black: #1E1E1E;
+    --jet: #363636;
+    --platinum: #DCDCDC;
+    --purple: #A48AF9;
+    --bright-purple: #7733FF;
+}
+
+/* general */
+
+* {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background-color: var(--jet);
+}
+
+h1, h2, h3, h4, p {
+    color: var(--platinum);
+}
+
+/* .container {
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+} */
+
+/* nav */
+
+header {
+    width: 100%;
+    background-color: var(--black);
+    padding: 1rem;
+    position: relative;
+    box-sizing: border-box;
+}
+
+nav {
+    position: relative;
+}
+
+nav a {
+
+}
+
+.nav-items {
+    list-style: none;
+    position: absolute;
+    display: inline-block;
+    right: 0;
+}
+
+.nav-items li {
+    display: inline-block;
+    text-transform: capitalize;
+    margin-left: 25px;
+}
+
+.nav-items li a, nav a {
+    color: var(--purple);
+    text-decoration: none;
+}
+
+/* home */
+
+.pfp-container {
+    max-width: 100%;
+    margin: 2em 0;
+}
+
+.profile-picture {
+    border: 3px solid var(--purple);
+    border-radius: 50%;
+    width: calc(100% - 6px);
+    background-size: cover;
+}
+
+/* skills */
+
+
+
+/* projects */
+
+
+
+/* contact */
+
+
+
+/* footer */
