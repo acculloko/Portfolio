@@ -1,11 +1,11 @@
 document.addEventListener('scroll', () => {
-    const header = document.querySelector('.navbar');
+    const navbar = document.querySelector('.navbar');
 
     if (window.scrollY > 0) {
-        header.classList.add('scrolled');
-        header.style.position = 'sticky'
+        navbar.classList.add('scrolled');
+        navbar.style.position = 'sticky'
     } else {
-        header.classList.remove('scrolled');
-        header.style.position = 'absolute'
+        navbar.classList.remove('scrolled');
+        navbar.style.position = 'absolute'
     }
 });
