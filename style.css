@@ -11,7 +11,7 @@
 
 
 * {
-    font-family: "Lexend", Arial, Helvetica, sans-serif;
+    font-family: "Barlow Condensed", serif;
     box-sizing: border-box;
     font-size: 1em;
     margin: 0;
@@ -42,7 +42,7 @@ h1, h2, h3, h4, p {
 
 .section-title {
     font-family: "Abril Fatface", serif;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     text-align: center;
     font-size: 4rem;
     width: 100%;
@@ -113,13 +113,13 @@ nav {
     right: 0;
     background-image: url(assets/BG/1x/arrowrain.png);
     background-size: cover;
-    opacity: .2;
+    opacity: .3;
     z-index: -2;
 }
 
 .home-wrapper {
     position: relative;
-    padding: 4.9rem 0 3rem 0;
+    padding: 2.5rem 0 3rem 0;
 }
 
 .top-triangle {
@@ -145,9 +145,8 @@ nav {
     /* border: 3px solid var(--tropical-indigo);
     border-radius: 50%;
     width: calc(90% - 6px); */
-    width: 83%;
+    width: 100%;
     background-size: cover;
-    max-width: 100%;
     filter: grayscale() brightness(75%);
     clip-path: polygon(10% 0%, 100% 50%, 80% 94%, 0% 85%);
 }
@@ -158,6 +157,14 @@ nav {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    left: 0;
+    bottom: 0;
+}
+
+.title-wrapper p {
+    padding-top: 0rem;
+    font-size: 1.8rem;
+    font-weight: 700;
 }
 
 .dev {
@@ -173,18 +180,80 @@ nav {
     position: absolute;
     top: 2rem;
     left: 0;
-    color: var(--tropical-indigo);
+    color: var(--blue-violet);
     z-index: -1;
 }
 
 .home-content {
+    text-align: left;
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+    position: relative;
+    display: flex;
+}
+
+.home-content .content {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-top: 1rem;
+    max-width: 55%;
+}
+
+.scroll-down-wrapper {
+    flex-grow: 1;
     text-align: center;
-    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-text-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-text-wrapper p {
+    font-weight: 600;
+    font-size: 1.4rem;
+    white-space: nowrap;
+    flex-shrink: 0;
     position: relative;
 }
 
-.home-content p {
-    margin-top: 1rem;
+.scroll-text-wrapper p::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -.4rem;
+    height: 0.3rem;
+    width: 100%;
+    background-color: var(--anti-flash-white);
+}
+
+.scroll-down-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.scroll-down-arrow::after {
+    content: url(assets/SVG/google-material-arrow-down-purple.svg);
+    width: 100%;
+    position: absolute;
+    top: -.6rem;
+    left: 0;
+    fill: var(--blue-violet);
+    z-index: -1;
+}
+
+.arrow-resizer {
+    padding: 1rem;
+    padding-top: 1.5rem;
 }
 
 
