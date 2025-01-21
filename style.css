@@ -6,7 +6,9 @@
     --blue-violet: #7C3AED;
 }
 
+
 /* general */
+
 
 * {
     font-family: "Lexend", Arial, Helvetica, sans-serif;
@@ -19,18 +21,27 @@
 body {
     margin: 0;
     background-color: var(--night);
+    background : -moz-linear-gradient(35.39% 64.49% 60.19deg,rgba(26, 26, 26, 1) 0%,rgba(0, 0, 0, 1) 100%);
+    background : -webkit-linear-gradient(60.19deg, rgba(26, 26, 26, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background : -webkit-gradient(linear,35.39% 64.49% ,92.09% 8.27% ,color-stop(0,rgba(26, 26, 26, 1) ),color-stop(1,rgba(0, 0, 0, 1) ));
+    background : -o-linear-gradient(60.19deg, rgba(26, 26, 26, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background : -ms-linear-gradient(60.19deg, rgba(26, 26, 26, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#1A1A1A', endColorstr='#000000' ,GradientType=0)";
+    background : linear-gradient(29.81deg, rgba(26, 26, 26, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1A1A1A',endColorstr='#000000' , GradientType=1);
 }
 
 h1, h2, h3, h4, p {
     color: var(--anti-flash-white);
 }
 
-main {
+.not-skills {
     padding-left: 1.3rem;
     padding-right: 1.3rem;
 }
 
 .section-title {
+    font-family: "Abril Fatface", serif;
     text-transform: capitalize;
     text-align: center;
     font-size: 4rem;
@@ -38,14 +49,34 @@ main {
     padding-bottom: 2rem;
 }
 
+main {
+    position: relative;
+}
+
+
 /* nav */
 
-header {
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
     width: 100%;
-    background-color: var(--night);
     padding: 1rem;
-    position: relative;
+    /* position: relative; */
     box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0);
+
+    transition: background-color 0.4s ease-in-out;
+}
+
+.navbar.scrolled {
+    background-color: var(--night);
 }
 
 nav {
@@ -66,88 +97,172 @@ nav {
 }
 
 .nav-items li a, nav a {
-    color: var(--tropical-indigo);
+    font-family: "Bebas Neue", serif;
+    color: var(--anti-flash-white);
     text-decoration: none;
 }
 
+
 /* home */
+
+.home-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(assets/BG/1x/arrowrain.png);
+    background-size: cover;
+    opacity: .2;
+    z-index: -2;
+}
+
+.home-wrapper {
+    position: relative;
+    padding: 4.9rem 0 3rem 0;
+}
+
+.top-triangle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10.5rem;
+    z-index: -1;
+    fill: var(--blue-violet);
+}
 
 .pfp-container {
     width: 100%;
-    margin: 2em 0;
+    margin: 0 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .profile-picture {
-    border: 3px solid var(--tropical-indigo);
+    /* border: 3px solid var(--tropical-indigo);
     border-radius: 50%;
-    width: calc(90% - 6px);
+    width: calc(90% - 6px); */
+    width: 83%;
     background-size: cover;
+    max-width: 100%;
+    filter: grayscale() brightness(75%);
+    clip-path: polygon(10% 0%, 100% 50%, 80% 94%, 0% 85%);
+}
+
+.title-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dev {
+    font-family: "Abril Fatface", serif;
+    /* text-transform: capitalize; */
+    position: relative;
+    font-size: 6.75rem;
+    z-index: 10;
+}
+
+.dev::before {
+    content: "dev.";
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    color: var(--tropical-indigo);
+    z-index: -1;
 }
 
 .home-content {
     text-align: center;
     margin-bottom: 3rem;
-}
-
-.home-content h1 {
-    font-size: 2rem;
-    color: var(--tropical-indigo);
+    position: relative;
 }
 
 .home-content p {
     margin-top: 1rem;
 }
 
+
 /* skills */
 
-.outer-hex-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, calc(var(--s) + 2 * var(--m)));
-    justify-content: center;
-    --s: 5.5rem;
-    --m: 4px;
-    --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px)
-}
 
 .hex-container {
-    grid-column: 1/-1;
-    font-size: 0;
-    max-width: calc(var(--s) * 3 + var(--m) * 6);
-    padding-bottom: 4rem;
+    overflow: hidden;
+    padding: 7rem 0;
+    margin-top: -6rem;
 }
 
-.hex-container div {
-    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-    width: var(--s);
-    margin: var(--m);
-    height: calc(var(--s) * 1.1547);
-    display: inline-block;
-    font-size: initial;
-    background: var(--blue-violet);
-    margin-bottom: calc(var(--m) - var(--s) * 0.2885);
+.carousel {
+    transform: translateX(-4.5em) translateY(4rem);
+    rotate: 30deg;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    width: 160%;
+    > * {
+      flex: 0 0 100%;
+    }
+    &:hover .group {
+        animation-play-state: paused;
+    }
 }
 
-.hex-container::before {
-    content: "";
-    width: calc(var(--s)/2 + var(--m));
-    float: left;
-    height: 100%;
-    /* shape-outside: repeating-linear-gradient(#0000 0 calc(var(--f) - 3px), #000 0 var(--f)); */
-    shape-outside: repeating-linear-gradient(#0000,
-                                            #0000 0 50px,
-                                            #000 0 50px,
-                                            #000 0 53px, 
-                                            #0000 0 54px, 
-                                            #0000 0 var(--f));
+.card {
+    aspect-ratio: cos(30deg);
+    clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+    background-color: var(--blue-violet);
+    width: 8rem;
+    color: white;
+    padding: 20px;
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+}
+
+.group {
+    display: flex;
+    gap: 20px;
+    padding-right: 20px;
+    will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
+    animation: scrolling 10s linear infinite;
 }
 
 /* projects */
 
-
+.project-imgs img {
+    max-width: 100%;
+}
 
 /* contact */
 
 
 
 /* footer */
+
+
+
+/* animatio */
+
+@keyframes navScroll {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    100%{
+        background-color: var(--night);
+    }
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+  }
+
