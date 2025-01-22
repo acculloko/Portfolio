@@ -188,6 +188,7 @@ nav {
     padding-top: 1rem;
     position: relative;
     display: flex;
+    justify-content: space-between;
 }
 
 .home-content .content {
@@ -198,7 +199,7 @@ nav {
 }
 
 .scroll-down-wrapper {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -234,6 +235,7 @@ nav {
 .arrow-resizer {
     padding: 1rem;
     padding-top: 1.5rem;
+    max-width: 9rem;
 }
 
 .scroll-down-arrow {
@@ -274,7 +276,7 @@ nav {
     background-position: top;
     opacity: .7;
     z-index: -2;
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
 }
 
 .skills-background-end {
@@ -316,6 +318,21 @@ nav {
     z-index: -1;
 }
 
+.display-div {
+    position: absolute;
+    right: 0;
+    top: 10.5rem;
+    padding-right: 1.3rem;
+}
+
+.text-display {
+    text-align: right;
+    text-decoration: underline var(--blue-violet);
+    font-family: "Bebas Neue", serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
 .hex-container {
     overflow: hidden;
     padding: 20rem 0 8rem 0;
@@ -345,6 +362,7 @@ nav {
     padding-right: 20px;
     will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
     animation: scrolling 10s linear infinite;
+    max-width: fit-content;
 }
 
 .card {
@@ -529,7 +547,8 @@ footer p {
 }
 
 
-/* animatio */
+/* animations */
+
 
 @keyframes navScroll {
     0% {
@@ -547,5 +566,10 @@ footer p {
     100% {
         transform: translateX(-100%);
     }
-  }
+}
+
+
+/* Media queries */
+
+
 
