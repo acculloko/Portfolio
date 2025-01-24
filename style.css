@@ -765,11 +765,35 @@ footer p {
 @media screen and (min-width: 1270px) {
     /* general */
 
-    main {
+    /* main {
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+    } */
+
+    section {
         max-width: 1280px;
         margin-left: auto;
         margin-right: auto;
     }
+
+    /* nav */
+
+    nav {
+        max-width: calc(1280px - 2 * 2.6rem);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* .sticky-nav {
+        border-left: rgba(0, 0, 0, 0);
+        border-right: rgba(0, 0, 0, 0);
+    }
+
+    .sticky-nav.scrolled {
+        border-left: #303030 solid 1px;
+        border-right: #303030 solid 1px;
+    } */
 
     /* projects */
 
