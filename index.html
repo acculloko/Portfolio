@@ -10,7 +10,8 @@
         <script src="https://kit.fontawesome.com/d1b37a17d4.js" crossorigin="anonymous"></script>
         <script src="script/carousel-hover.js" defer></script>
         <script src="script/scroll.js" defer></script>
-        <script src="script/text-display.js"></script>
+        <script src="script/smooth-scroll.js" defer></script>
+        <script src="script/text-display.js" defer></script>
         <title>Lucca Lucchin de Campos Costa</title>
     </head>
     <body>
@@ -21,17 +22,17 @@
                 <div class="navbar" class="nav">
                     <div class="sticky-nav">
                         <nav>
-                            <a href="#">Lucca Costa</a>
+                            <a class="nav-link" href="#home">Lucca Costa</a>
                             <ul class="nav-items">
-                                <li><a href="#">Skills</a></li>
-                                <li><a href="#">Projects</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a class="nav-link" href="#skills">Skills</a></li>
+                                <li><a class="nav-link" href="#projects">Projects</a></li>
+                                <li><a class="nav-link" href="#contact">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
 
-                <section class="home-wrapper">
+                <section id="home" class="home-wrapper">
                     <span class="home-background"></span>
                     <span class="top-triangle">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 489.5 588.93"><defs><style>.triangle-cls-1{fill:#7c3aed;}</style></defs><title>toptriangle_1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><path class="triangle-cls-1" d="M250.74,498.89l158.77-83.25a5.65,5.65,0,0,1,8.15,6.14L392.5,543.13Z"/><path class="triangle-cls-1" d="M489.5,0H0L55.64,565.56c2.14,21.74,28.59,31.21,44,15.76L489.5,191.5Z"/></g></g></svg>
@@ -60,7 +61,7 @@
                     </div>
                 </section>
 
-                <section class="skills-container">
+                <section id="skills" class="skills-container">
                     <span class="skills-background">
                         <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1642.22 2029.95"><defs><style>.hexagons-cls-1{fill:none;stroke:#7c3aed;stroke-miterlimit:10;stroke-width:9px;}</style></defs><title>hexagoons</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><polygon class="hexagons-cls-1" points="1225.55 888.04 1138.8 612.77 857.03 550.27 662.02 763.04 748.78 1038.3 1030.54 1100.81 1225.55 888.04"/><polygon class="hexagons-cls-1" points="691.85 1061.89 605.09 786.63 323.33 724.13 128.32 936.89 215.07 1212.16 496.84 1274.66 691.85 1061.89"/><polygon class="hexagons-cls-1" points="568.6 1599.27 481.85 1324 200.08 1261.5 5.07 1474.27 91.83 1749.53 373.59 1812.03 568.6 1599.27"/><polygon class="hexagons-cls-1" points="1516.83 1812.22 1430.07 1536.96 1148.31 1474.46 953.3 1687.22 1040.05 1962.49 1321.82 2024.99 1516.83 1812.22"/><polygon class="hexagons-cls-1" points="809.45 515.91 722.69 240.64 440.93 178.14 245.92 390.91 332.67 666.17 614.44 728.67 809.45 515.91"/><polygon class="hexagons-cls-1" points="1343.52 342.72 1256.76 67.46 975 4.96 779.99 217.72 866.74 492.99 1148.51 555.49 1343.52 342.72"/><polygon class="hexagons-cls-1" points="1099.52 1436.28 1012.76 1161.01 731 1098.51 535.99 1311.28 622.75 1586.54 904.51 1649.04 1099.52 1436.28"/><polygon class="hexagons-cls-1" points="1637.14 1270.23 1550.39 994.97 1268.62 932.46 1073.61 1145.23 1160.37 1420.49 1442.13 1483 1637.14 1270.23"/></g></g></svg> -->
                     </span>
@@ -182,7 +183,7 @@
                     </div>
                 </section>
 
-                <section class="projects-container not-skills">
+                <section id="projects" class="projects-container not-skills">
                     <div class="cross-circle"></div>
                     <div class="projects-background-start"></div>
                     <div class="projects-background"></div>
@@ -219,21 +220,21 @@
                             <img src="assets/Locus.png" alt="Locus landing page">
                         </div> -->
                         <div class="btn-container">
-                            <a class="project-btn" href="">view repo<i class="fa-solid fa-arrow-right"></i></a>
+                            <a class="project-btn" href="https://github.com/acculloko/rps-tournament">view repo<i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </section>
 
-                <section class="contact-container not-skills">
+                <section id="contact" class="contact-container not-skills">
                     <hr>
                     <div class="contact-content">
                         <div class="socials">
                             <div class="socials-inner">
                                 <h2>contact</h2>
                                 <div class="socials-links">
-                                    <div><a href="#"><i class="fa-brands fa-linkedin"></i></a></div>
-                                    <div><a href="#"><i class="fa-brands fa-github"></i></a></div>
-                                    <div><a href="#"><i class="fa-solid fa-envelope"></i></a></div>
+                                    <div><a href="https://www.linkedin.com/in/lucca-lucchin-de-campos-costa-664832233/"><i class="fa-brands fa-linkedin"></i></a></div>
+                                    <div><a href="https://github.com/acculloko"><i class="fa-brands fa-github"></i></a></div>
+                                    <div><a href="mailto:lucca.lucchin@gmail.com"><i class="fa-solid fa-envelope"></i></a></div>
                                 </div>
                             </div>
                         </div>

@@ -18,6 +18,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background-color: var(--night);
@@ -777,6 +781,10 @@ footer p {
         width: 36rem;
     }
 
+    .project h2 {
+        margin-top: 0;
+    }
+
     .locus-container .project-imgs {
         grid-column: 4 / 8;
         grid-row: 1 / 3;
@@ -785,6 +793,7 @@ footer p {
     .locus-container .locus-logo {
         grid-column: 1 / 3;
         grid-row: 1;
+        margin-top: -0.65rem;
     }
 
     .locus-container .project-content {
